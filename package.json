@@ -1,6 +1,6 @@
 {
     "name": "@troychaplin79/component-test",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "troy Chaplin",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -43,6 +43,7 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "^7.31.11",
         "postcss": "^8.4.20",
+        "rds-tailwind-theme": "^0.2.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.2.4",
