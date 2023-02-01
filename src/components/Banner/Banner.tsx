@@ -1,13 +1,14 @@
 import React from 'react'
 import { rdsFontSizes } from '../../utils/tailwindClasses'
-import { BannerAnimated } from './Banner.Animated'
+// import { BannerAnimated } from './Banner.Animated'
 
 export interface BannerProps {
     children?: React.ReactNode
     title?: string
     paragraph?: string
     fontSize?: '4xl' | '5xl' | '6xl'
-    isType?: 'light-fade' | 'dark-wave' | 'red-wave' | 'image' | 'animated'
+    isType?: 'light-fade' | 'dark-wave' | 'red-wave' | 'image'
+    // isType?: 'light-fade' | 'dark-wave' | 'red-wave' | 'image' | 'animated'
     align?: 'vertical' | 'horizontal'
     hasOverlap?: boolean
     image?: string
