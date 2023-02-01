@@ -1,6 +1,6 @@
 {
     "name": "@troychaplin79/component-test",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "author": "troy Chaplin",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -35,7 +35,6 @@
     },
     "homepage": "https://github.com/troychaplin/component-test#readme",
     "dependencies": {
-        "date-fns": "^2.29.3",
         "rds-tailwind-theme": "^0.2.3"
     },
     "peerDependencies": {
@@ -66,6 +65,7 @@
         "babel-loader": "^9.1.0",
         "concurrently": "^7.6.0",
         "cypress": "^12.3.0",
+        "date-fns": "^2.29.3",
         "esbuild": "^0.16.13",
         "eslint": "^8.31.0",
         "eslint-config-prettier": "^8.6.0",
