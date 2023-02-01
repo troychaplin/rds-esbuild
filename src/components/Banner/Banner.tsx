@@ -83,7 +83,7 @@ const BannerBase = ({
                 {isType === 'image' && <BannerImg image={image} imageAlt={imageAlt} />}
                 {isType === 'dark-wave' && <BannerWave />}
                 {isType === 'red-wave' && <BannerWave />}
-                {isType === 'animated' && <BannerAnimated />}
+                {/* {isType === 'animated' && <BannerAnimated />} */}
             </header>
         </>
     )
