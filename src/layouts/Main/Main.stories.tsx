@@ -2,7 +2,7 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import { Main, MainProps } from './Main'
 import { Column } from '../Column'
-import { Banner } from '../../components/Banner'
+// import { Banner } from '../../components/Banner'
 import { Prose } from '../../components/Prose'
 import { ProseData as sampleContent } from '../../components/Prose/ProseData'
 import { Container } from '../Container'
@@ -50,10 +50,10 @@ const WithContainerTemplate: Story<MainProps> = (args) => (
 
 const WithOverlapTemplate: Story<MainProps> = (args) => (
     <>
-        <Banner hasOverlap isType='dark-wave' title='Content Overlay' />
+        {/* <Banner hasOverlap isType='dark-wave' title='Content Overlay' /> */}
         <Main {...args}>
             <Column maxWidth='3xl'>
-                <div className='bg-white px-14 py-12 rounded-lg'>
+                <div className='py-12 bg-white rounded-lg px-14'>
                     <Prose as='article' content={sampleContent} />
                 </div>
             </Column>
