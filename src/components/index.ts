@@ -1,2 +1,3 @@
 export * from './Button/Button'
-export * from './Header/Header'
+export * from './HeroIcon/HeroIcon'
+export * from './Link/Link'

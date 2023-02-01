@@ -1,28 +1,16 @@
-import './button.css';
-interface ButtonProps {
-    /**
-     * Is this the principal call to action on the page?
-     */
-    primary?: boolean;
-    /**
-     * What background color to use
-     */
-    backgroundColor?: string;
-    /**
-     * How large should the button be?
-     */
-    size?: 'small' | 'medium' | 'large';
-    /**
-     * Button contents
-     */
-    label: string;
-    /**
-     * Optional click handler
-     */
-    onClick?: () => void;
+import React from 'react';
+import { IconName } from '../HeroIcon';
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    title?: string;
+    icon?: IconName;
+    isType?: 'default' | 'ghost' | 'grey' | 'dark-grey' | 'white' | 'disabled';
+    size?: 'sm' | 'base';
+    hasShadow?: boolean;
+    isFull?: boolean;
+    isCenter?: boolean;
+    isDisabled?: boolean;
+    hasDropDown?: boolean;
+    url?: string | URL;
+    wrapper?: any;
 }
-/**
- * Primary UI component for user interaction
- */
-export declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => JSX.Element;
-export {};
+export declare const Button: ({ isType, size, title, icon, hasShadow, isFull, isCenter, url, wrapper, isDisabled, hasDropDown, ...rest }: ButtonProps) => JSX.Element;

@@ -1,40 +1,133 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import React from 'react'
+import { Meta, Story } from '@storybook/react'
+import { Button, ButtonProps } from './Button'
 
-import { Button } from './Button'
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Components/Button',
+    title: 'Components/Inputs/Button',
     component: Button,
-    // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {
-        backgroundColor: { control: 'color' },
+        onClick: { action: 'clicked' },
+        title: {
+            control: {
+                type: 'text',
+            },
+        },
+        disabled: {
+            control: {
+                type: 'boolean',
+            },
+        },
     },
-} as ComponentMeta<typeof Button>
+    parameters: {
+        controls: { expanded: true },
+    },
+} as Meta<typeof Button>
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
+const Template: Story<ButtonProps> = (args) => <Button {...args} />
 
-export const Primary = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-    primary: true,
-    label: 'Button',
+export const Default = Template.bind({})
+Default.args = {
+    title: 'Default Button',
+    onClick: () => {
+        alert('button has been clicked ')
+    },
 }
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-    label: 'Button',
+export const GhostButton = Template.bind({})
+GhostButton.args = {
+    title: 'Ghost Button',
+    isType: 'ghost',
+    onClick: () => {
+        alert('button has been clicked ')
+    },
 }
 
-export const Large = Template.bind({})
-Large.args = {
-    size: 'large',
-    label: 'Button',
+export const GreyButton = Template.bind({})
+GreyButton.args = {
+    title: 'Grey Button',
+    isType: 'grey',
+    onClick: () => {
+        alert('button has been clicked ')
+    },
 }
 
-export const Small = Template.bind({})
-Small.args = {
-    size: 'small',
-    label: 'Button',
+export const DarkGreyButton = Template.bind({})
+DarkGreyButton.args = {
+    title: 'Dark Grey Button',
+    isType: 'dark-grey',
+    onClick: () => {
+        alert('button has been clicked ')
+    },
+}
+
+export const WhiteButton = Template.bind({})
+WhiteButton.args = {
+    title: 'White Button',
+    isType: 'white',
+    onClick: () => {
+        alert('button has been clicked ')
+    },
+}
+
+export const FullWidth = Template.bind({})
+FullWidth.args = {
+    title: 'Full Width Button',
+    isFull: true,
+    onClick: () => {
+        alert('button has been clicked ')
+    },
+}
+
+export const centeredButton = Template.bind({})
+centeredButton.args = {
+    title: 'Centered Button',
+    isCenter: true,
+    onClick: () => {
+        alert('button has been clicked ')
+    },
+}
+
+export const IconTextButton = Template.bind({})
+IconTextButton.args = {
+    title: 'Button with Icon',
+    icon: 'MapPinIcon',
+    onClick: () => {
+        alert('button has been clicked ')
+    },
+}
+
+export const IconButton = Template.bind({})
+IconButton.args = {
+    icon: 'PlusIcon',
+    onClick: () => {
+        alert('button has been clicked ')
+    },
+}
+
+export const DisabledButton = Template.bind({})
+DisabledButton.args = {
+    title: 'Disabled Button',
+    isType: 'disabled',
+    disabled: true,
+    onClick: () => {
+        alert('button has been clicked ')
+    },
+}
+
+export const hasShadowButton = Template.bind({})
+hasShadowButton.args = {
+    title: 'Button has Shadows',
+    hasShadow: true,
+    onClick: () => {
+        alert('button has been clicked ')
+    },
+}
+
+export const SmallButton = Template.bind({})
+SmallButton.args = {
+    title: 'Small Button',
+    size: 'sm',
+    onClick: () => {
+        alert('button has been clicked ')
+    },
 }
