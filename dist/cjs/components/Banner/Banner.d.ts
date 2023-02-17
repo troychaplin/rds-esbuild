@@ -3,9 +3,10 @@ export interface BannerProps {
     children?: React.ReactNode;
     title?: string;
     paragraph?: string;
-    fontSize?: '4xl' | '5xl' | '6xl';
-    isType?: 'light-fade' | 'dark-wave' | 'red-wave' | 'image';
-    align?: 'vertical' | 'horizontal';
+    fontSize?: '5xl' | '6xl';
+    maxWidth?: 'none' | 'full' | '5xl' | '7xl';
+    isType?: 'light-grey' | 'light-fade' | 'dark-wave' | 'red-wave' | 'image' | 'animated';
+    align?: 'center' | 'left';
     hasOverlap?: boolean;
     image?: string;
     imageAlt?: string;
@@ -15,7 +16,7 @@ export interface BannerImgProps {
     imageAlt?: string;
 }
 export declare const Banner: {
-    ({ children, title, paragraph, isType, fontSize, align, hasOverlap, image, imageAlt, }: BannerProps & BannerImgProps): JSX.Element;
+    ({ children, title, paragraph, maxWidth, isType, fontSize, align, hasOverlap, image, imageAlt, }: BannerProps & BannerImgProps): JSX.Element;
     displayName: string;
 } & {
     ButtonGroup: {

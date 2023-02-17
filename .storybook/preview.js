@@ -2,7 +2,34 @@ import '../src/styles/index.css'
 export const parameters = {
     options: {
         storySort: {
-            order: ['Get Started', ['Home', 'Single'], 'Components'],
+            method: 'alphabetical',
+            order: [
+                'Get Started', [
+                    'Introduction',
+                    'Templates', [
+                        'Basic Markup',
+                        'Grey Section',
+                        'Alternating Sections',
+                        'Grids And Columns',
+                    ],
+                ],
+                'Components',
+                'Cards & Lists',
+                'Headers',
+                'Footers',
+                'Layouts', [
+                    'Main',
+                    'Container',
+                    'Article',
+                    'Column',
+                    'Aside',
+                    'Panel',
+                    'Stacked List',
+                ],
+                'Forms',
+                'Loading Screens',
+                'Project Templates'
+            ],
         },
     },
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -12,4 +39,10 @@ export const parameters = {
             date: /Date$/,
         },
     },
-}
+};
+
+var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_REACT_APP_GOOGLE_MAPS_API_KEY}&libraries=places&callback=Function.prototype`;
+    document.body.appendChild(script);
+    

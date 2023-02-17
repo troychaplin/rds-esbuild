@@ -1,23 +1,19 @@
-/// <reference types="node" />
 import React from 'react';
-import { UrlObject } from 'url';
-type Url = string | UrlObject;
 export interface LinkProps {
-    href: URL | string;
-    as?: Url;
-    wrapper?: any;
-    component?: string;
-    className?: string;
+    ref?: any;
+    href?: string | undefined;
+    as?: string | undefined;
     replace?: boolean;
-    soft?: boolean;
     scroll?: boolean;
     shallow?: boolean;
+    passHref?: boolean;
     prefetch?: boolean;
     locale?: string | false;
-    target?: string;
-    children: any;
-    onMouseEnter?: (e: any) => void;
-    onClick?: (e: any) => void;
+    legacyBehavior?: boolean;
+    children?: any;
+    className?: string;
+    onMouseEnter?: React.MouseEventHandler<HTMLAnchorElement>;
+    onTouchStart?: React.TouchEventHandler<HTMLAnchorElement>;
+    onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
-export declare const Link: React.ForwardRefExoticComponent<LinkProps & React.RefAttributes<unknown>>;
-export {};
+export declare const Link: React.ForwardRefExoticComponent<Omit<LinkProps, "ref"> & React.RefAttributes<unknown>>;

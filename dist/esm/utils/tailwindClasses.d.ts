@@ -1,12 +1,16 @@
 export declare const rdsMaxWidth: {
     none: string;
     full: string;
-    '3xl': string;
-    '4xl': string;
     '5xl': string;
-    '6xl': string;
     '7xl': string;
 };
+export declare const rdsMaxWidthChildren: {
+    none: string;
+    full: string;
+    '5xl': string;
+    '7xl': string;
+};
+export declare const rdsOverlay = "bg-cu-black/30";
 export declare const rdsGridColumns: {
     '1': string;
     '2': string;
@@ -17,11 +21,7 @@ export declare const rdsGridColumns: {
 };
 export declare const rdsGridSpacing: {
     '0': string;
-    '0.5': string;
-    '1': string;
-    '2': string;
-    '4': string;
-    '8': string;
+    '5': string;
     '10': string;
 };
 export declare const rdsBgColor: {
