@@ -1,6 +1,6 @@
 {
     "name": "@troychaplin79/rds-esbuild",
-    "version": "0.0.20",
+    "version": "0.0.21",
     "author": "troy Chaplin",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
