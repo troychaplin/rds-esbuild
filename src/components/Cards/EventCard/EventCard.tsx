@@ -2,6 +2,7 @@ import { CalendarDaysIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/out
 import { getDate, getMonth, isSameDay, parseISO } from 'date-fns'
 import React from 'react'
 import { Badge } from '../../Badge/index'
+import { Link } from '../../Link/Link'
 
 interface Tags {
     category: { id: number; name: string; slug: string }[]
@@ -51,7 +52,7 @@ export const EventCard = ({
     const formatTime = (date: any) => {
         var hours = date.getHours()
         var minutes = date.getMinutes()
-        var ampm = hours >= 12 ? 'pm' : 'am'
+        var ampm = hours >= 12 ? 'PM' : 'AM'
         hours = hours % 12
         hours = hours ? hours : 12
         minutes = minutes < 10 ? '0' + minutes : minutes
@@ -87,7 +88,7 @@ export const EventCard = ({
 
     return (
         <div className='not-prose group relative overflow-hidden rounded-lg bg-white shadow-lg duration-300 ease-in @container hover:scale-105 md:max-w-lg'>
-            <a href={link} className='relative flex flex-col h-full cursor-pointer'>
+            <Link href={link} className='relative flex flex-col h-full cursor-pointer'>
                 <div className='relative'>
                     <div className='aspect-w-16 aspect-h-9 @sm:md:aspect-h-6'>
                         <img
@@ -114,11 +115,11 @@ export const EventCard = ({
                         <li className='flex text-sm text-cu-black-600 @sm:md:text-base'>
                             {multiDayDisplay()}
                             {isEventSameDay
-                                ? formatTime(startDate) + '-' + formatTime(endDate)
+                                ? formatTime(startDate) + ' — ' + formatTime(endDate)
                                 : getMonthName(eventStartMonth) +
                                   ' ' +
                                   eventStartDate +
-                                  ' - ' +
+                                  ' — ' +
                                   eventEndDate}
                         </li>
                         <li className='flex text-sm text-cu-black-600 @sm:md:text-base'>
@@ -136,7 +137,7 @@ export const EventCard = ({
                         <Badge key={tag.id}>{tag.name}</Badge>
                     ))}
                 </div>
-            </a>
+            </Link>
         </div>
     )
 }

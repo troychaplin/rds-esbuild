@@ -10,7 +10,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     isCenter?: boolean;
     isDisabled?: boolean;
     hasDropDown?: boolean;
-    url?: string | URL;
-    wrapper?: any;
+    url?: string | undefined;
 }
-export declare const Button: ({ isType, size, title, icon, hasShadow, isFull, isCenter, url, wrapper, isDisabled, hasDropDown, ...rest }: ButtonProps) => JSX.Element;
+export declare const Button: ({ isType, size, title, icon, hasShadow, isFull, isCenter, url, isDisabled, hasDropDown, ...rest }: ButtonProps) => JSX.Element;

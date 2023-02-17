@@ -38,28 +38,42 @@
     "dependencies": {
         "@headlessui/react": "^1.7.11",
         "@heroicons/react": "^2.0.16",
+        "@types/react-places-autocomplete": "^7.2.9",
         "date-fns": "^2.29.3",
+        "formik": "^2.2.9",
         "rds-tailwind-theme": "^0.3.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.2.7",
-        "typescript": "4.9.5"
+        "typescript": "4.9.5",
+        "@react-google-maps/api": "^2.18.1",
+        "react-places-autocomplete": "^7.3.0",
+        "react-player": "^2.11.2",
+        "yup": "^1.0.0"
     },
     "peerDependencies": {
         "@headlessui/react": "^1.7.11",
         "@heroicons/react": "^2.0.16",
+        "@react-google-maps/api": "^2.18.1",
+        "@types/react-places-autocomplete": "^7.2.9",
         "date-fns": "^2.29.3",
+        "formik": "^2.2.9",
         "rds-tailwind-theme": "^0.3.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.2.7",
-        "typescript": "4.9.5"
+        "typescript": "4.9.5",
+        "react-places-autocomplete": "^7.3.0",
+        "react-player": "^2.11.2",
+        "yup": "^1.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.20.12",
+        "@storybook/addon-a11y": "^6.5.16",
         "@storybook/addon-actions": "^6.5.16",
         "@storybook/addon-essentials": "^6.5.16",
         "@storybook/addon-interactions": "^6.5.16",
+        "@storybook/addon-info": "^5.3.21",
         "@storybook/addon-links": "^6.5.16",
         "@storybook/addon-postcss": "^2.0.0",
         "@storybook/addons": "^6.5.16",
@@ -68,11 +82,15 @@
         "@storybook/react": "^6.5.16",
         "@storybook/testing-library": "^0.0.13",
         "@storybook/theming": "^6.5.16",
+        "@tailwindcss/aspect-ratio": "^0.4.2",
+        "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/typography": "^0.5.9",
         "@types/node": "^18.14.0",
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
         "@typescript-eslint/eslint-plugin": "^5.52.0",
         "@typescript-eslint/parser": "^5.52.0",
+        "@whitespace/storybook-addon-html": "^5.1.1",
         "autoprefixer": "^10.4.13",
         "babel-loader": "^9.1.2",
         "concurrently": "^7.6.0",
@@ -87,6 +105,9 @@
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-promise": "^6.1.1",
         "husky": "^8.0.3",
-        "postcss": "^8.4.21"
+        "postcss": "^8.4.21",
+        "react-is": "^18.2.0",
+        "react-quill": "^2.0.0",
+        "tslib": "^2.5.0"
     }
 }

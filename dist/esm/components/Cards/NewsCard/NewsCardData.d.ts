@@ -1,4 +1,4 @@
-export declare const NewsItemData: {
+export declare const NewsCardData: {
     id: number;
     title: string;
     url: string;

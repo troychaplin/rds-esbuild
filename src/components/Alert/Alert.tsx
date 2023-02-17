@@ -27,7 +27,7 @@ export interface AlertContentProps {
 
 const Alerter = ({ children }: AlerterProps) => {
     return (
-        <div aria-live='assertive' className='top-20'>
+        <div aria-live='assertive' className='not-prose top-20'>
             <div className='items-center w-full space-y-4 sm:items-end'>{children}</div>
         </div>
     )
