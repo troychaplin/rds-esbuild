@@ -1,5 +1,5 @@
 {
-    "name": "@troychaplin79/component-test",
+    "name": "@troychaplin79/rds-esbuild",
     "version": "0.0.20",
     "author": "troy Chaplin",
     "main": "dist/cjs/index.js",
@@ -23,35 +23,36 @@
         "start": "start-storybook -p 6006 --ci --quiet --no-open",
         "test": "concurrently \"yarn dev\" \"yarn run cypress open\"",
         "test:ci": "concurrently \"yarn start\" \"cypress run --headless\"",
-        "prerelease": "yarn build && yarn build:docs && yarn test:ci"
+        "prerelease": "yarn build && yarn build:docs && yarn test:ci",
+        "clean": "rm -rf node_modules ; rm yarn.lock ; yarn install"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/troychaplin/component-test.git"
+        "url": "git+https://github.com/troychaplin/rds-esbuild.git"
     },
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/troychaplin/component-test/issues"
+        "url": "https://github.com/troychaplin/rds-esbuild/issues"
     },
-    "homepage": "https://github.com/troychaplin/component-test#readme",
+    "homepage": "https://github.com/troychaplin/rds-esbuild#readme",
     "dependencies": {
-        "@headlessui/react": "^1.7.8",
-        "@heroicons/react": "^2.0.14",
+        "@headlessui/react": "^1.7.11",
+        "@heroicons/react": "^2.0.16",
         "date-fns": "^2.29.3",
-        "rds-tailwind-theme": "^0.2.3",
+        "rds-tailwind-theme": "^0.3.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "tailwindcss": "^3.2.4",
+        "tailwindcss": "^3.2.7",
         "typescript": "4.9.5"
     },
     "peerDependencies": {
-        "@headlessui/react": "^1.7.8",
-        "@heroicons/react": "^2.0.14",
+        "@headlessui/react": "^1.7.11",
+        "@heroicons/react": "^2.0.16",
         "date-fns": "^2.29.3",
-        "rds-tailwind-theme": "^0.2.3",
+        "rds-tailwind-theme": "^0.3.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "tailwindcss": "^3.2.4",
+        "tailwindcss": "^3.2.7",
         "typescript": "4.9.5"
     },
     "devDependencies": {
@@ -67,17 +68,17 @@
         "@storybook/react": "^6.5.16",
         "@storybook/testing-library": "^0.0.13",
         "@storybook/theming": "^6.5.16",
-        "@types/node": "^18.11.18",
-        "@types/react": "^18.0.27",
-        "@types/react-dom": "^18.0.10",
-        "@typescript-eslint/eslint-plugin": "^5.50.0",
-        "@typescript-eslint/parser": "^5.50.0",
+        "@types/node": "^18.14.0",
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "@typescript-eslint/eslint-plugin": "^5.52.0",
+        "@typescript-eslint/parser": "^5.52.0",
         "autoprefixer": "^10.4.13",
         "babel-loader": "^9.1.2",
         "concurrently": "^7.6.0",
-        "cypress": "^12.5.0",
-        "esbuild": "^0.17.5",
-        "eslint": "^8.33.0",
+        "cypress": "^12.5.1",
+        "esbuild": "^0.17.8",
+        "eslint": "^8.34.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-config-standard-with-typescript": "^34.0.0",
         "eslint-plugin-import": "^2.27.5",
